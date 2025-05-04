@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="shortcut icon" href="./static/ico.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="./css/create-admin.css" />
+  <script src="./js/create-admin.js" type="module" defer></script>
+  <title>Create Admin</title>
+</head>
+
+<body>
+
+  <div>
+    <h1>Create New Admin</h1>
+  </div>
+
+  <div>
+    <label for="name">Name</label>
+    <input type="text" id="name" />
+  </div>
+
+  <div>
+    <label for="pass">Password</label>
+    <input type="password" id="pass" />
+    <input type="text" class="hidden" id="spass" disabled />
+  </div>
+
+  <div>
+    <label for="r-pass">Repeat Password</label>
+    <input type="password" id="r-pass" />
+    <input type="text" class="hidden" id="sr-pass" disabled />
+  </div>
+
+  <div>
+    <button id="create">Create</button>
+  </div>
+
+  <div>
+    <input type="checkbox" id="show-password" /><label for="show-password">Show Password</label>
+  </div>
+
+</body>
+
+</html>

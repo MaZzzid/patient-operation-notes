@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./static/ico.ico" type="image/x-icon" />
+    <title>Patient Operation Notes</title>
+    <link rel="stylesheet" href="./css/pon.css" />
+    <script src="./js/pon.js" defer type="module"></script>
+  </head>
+
+  <body>
+    <nav>
+      <div class="navitem active" data-navitem="new-note">
+        <span>
+          <img src="./static/add-note.png" />
+        </span>
+        <span> New Note </span>
+      </div>
+      <div class="navitem" data-navitem="all-note">
+        <span>
+          <img src="./static/note.png" />
+        </span>
+        <span> All Notes </span>
+      </div>
+      <div class="navitem" data-navitem="doctor-list">
+        <span>
+          <img src="./static/people.png" />
+        </span>
+        <span> Doctors </span>
+      </div>
+      <div class="navitem" data-navitem="setting">
+        <span>
+          <img src="./static/setting.png" />
+        </span>
+        <span> Setting </span>
+      </div>
+    </nav>
+    <main>
+      <div class="new-note active">
+        <div id="new-note">
+          <div class="input">
+            <label for="new-note-date">Date</label>
+            <input type="date" id="new-note-date" placeholder="Date-Time" />
+          </div>
+
+          <div class="input">
+            <label for="new-note-name">Name</label>
+            <input type="text" id="new-note-name" placeholder="Patient Name" />
+          </div>
+
+          <div class="input">
+            <label for="new-note-age">Age</label>
+            <input type="text" id="new-note-age" placeholder="Age" />
+          </div>
+
+          <div class="input">
+            <label for="new-note-sex">Sex</label>
+            <select id="new-note-sex">
+              <option value="Female" selected>Female</option>
+              <option value="Male">Male</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="input">
+            <label for="new-note-bed">Bed No.</label>
+            <input type="text" id="new-note-bed" placeholder="Bed No." />
+          </div>
+
+          <div class="input">
+            <label for="new-note-gurdian">Guardian Name</label>
+            <input
+              type="text"
+              id="new-note-gurdian"
+              placeholder="Guardian Name"
+            />
+          </div>
+
+          <div class="input">
+            <label for="new-note-address">Address</label>
+            <input type="text" id="new-note-address" placeholder="Address" />
+          </div>
+
+          <div class="input">
+            <label for="new-note-mobile">Mobile</label>
+            <input type="text" id="new-note-mobile" placeholder="Mobile" />
+          </div>
+
+          <div class="input">
+            <label for="new-note-surgeon">Surgeon</label>
+            <select id="new-note-surgeon"></select>
+          </div>
+
+          <div class="input">
+            <label for="new-note-asst-surgeon">Assitent Surgeon</label>
+            <select id="new-note-asst-surgeon"></select>
+          </div>
+
+          <div class="input">
+            <label for="new-note-anes">Anesthesiologist</label>
+            <select id="new-note-anes"></select>
+          </div>
+
+          <div class="input">
+            <label for="new-note-indication">Indication</label>
+            <input
+              type="text"
+              id="new-note-indication"
+              placeholder="Indication"
+            />
+          </div>
+
+          <div class="input">
+            <label for="new-note-procedure">Procedure</label>
+            <input
+              type="text"
+              id="new-note-procedure"
+              placeholder="Procedure"
+            />
+          </div>
+
+          <div class="input">
+            <label for="new-note-remark">Remark</label>
+            <input type="text" id="new-note-remark" placeholder="Remark" />
+          </div>
+
+          <div class="input">
+            <label for="new-note-contract">Contract Amount</label>
+            <input
+              type="number"
+              id="new-note-contract"
+              placeholder="Contract Amount"
+            />
+          </div>
+
+          <div class="input">
+            <label for="new-note-paid">Paid Amount</label>
+            <input type="number" id="new-note-paid" placeholder="Paid Amount" />
+          </div>
+
+          <div class="input">
+            <label for="new-note-due">Due Amount</label>
+            <input type="number" id="new-note-due" placeholder="Due Amount" />
+          </div>
+
+          <div class="input">
+            <button id="new-note-save">Save</button>
+          </div>
+        </div>
+      </div>
+      <div class="all-note">
+        <div class="header">
+          <div class="input">
+            <label for="all-note-search">Search</label>
+            <input type="text" id="all-note-search" placeholder="Search" />
+          </div>
+
+          <div class="input">
+            <label for="all-note-dispaly-per-page">Show</label>
+            <input
+              type="number"
+              id="all-note-display-per-page"
+              min="1"
+              value="100"
+            />
+          </div>
+
+          <div class="input">
+            <label for="all-note-goto-page">
+              <span>Page: </span><span id="all-note-page-no">1</span
+              ><span> of </span><span id="all-note-all-page"></span>
+            </label>
+            <input type="number" id="all-note-goto-page" min="1" value="1" />
+          </div>
+
+          <div class="input">
+            <label for="all-note-start-date">Start Date</label>
+            <input type="date" id="all-note-start-date" />
+          </div>
+
+          <div class="input">
+            <label for="all-note-end-date">End Date</label>
+            <input type="date" id="all-note-end-date" />
+          </div>
+        </div>
+
+        <div class="view">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Date</th>
+                <th>Mobile</th>
+                <th>Contract</th>
+                <th>Due</th>
+                <th>Surgeon</th>
+                <th>🙈</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+
+        <div class="all-note-overlay"></div>
+      </div>
+      <div class="doctor-list">
+        <div class="header">
+          <div class="input">
+            <input
+              type="text"
+              id="doctor-list-add-doctor"
+              placeholder="Add Doctor Name"
+            />
+            <button id="doctor-list-add-doctor-button">Save</button>
+          </div>
+        </div>
+
+        <div class="view">
+          <table>
+            <thead>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Edit</th>
+            </thead>
+            <tbody id="doctor-list-render-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="setting">
+        <div id="setting">
+          <h1>Chnage Admin Password</h1>
+          <div class="setting-msg hidden"></div>
+
+          <div class="input">
+            <label for="old-password">Old Password</label>
+            <input type="password" id="old-password" />
+            <input
+              type="text"
+              id="old-password-viewer"
+              class="hidden"
+              disabled
+            />
+          </div>
+
+          <div class="input">
+            <label for="new-password">New Password</label>
+            <input type="password" id="new-password" />
+            <input
+              type="text"
+              id="new-password-viewer"
+              class="hidden"
+              disabled
+            />
+          </div>
+
+          <div class="input">
+            <label for="repeat-password">Repeat Password</label>
+            <input type="password" id="repeat-password" />
+            <input
+              type="text"
+              id="repeat-password-viewer"
+              class="hidden"
+              disabled
+            />
+          </div>
+
+          <div class="input">
+            <input type="checkbox" id="show-password" /><label
+              for="show-password"
+              >Show</label
+            >
+          </div>
+
+          <div class="input">
+            <button id="save-new-password">Save</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

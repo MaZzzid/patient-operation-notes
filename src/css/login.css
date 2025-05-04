@@ -1,0 +1,23 @@
+@import url(./basic.css);
+
+html {
+  height: 100vh;
+}
+
+body {
+  padding: 0.5rem 3rem 1rem 3rem;
+}
+
+body>div:not(:last-child) {
+  margin-bottom: 6px;
+}
+
+h1 {
+  text-align: center;
+}
+
+#message {
+  border-radius: 2px;
+  font-size: 0.95rem;
+  padding: 1px 1px 1px 4px;
+}

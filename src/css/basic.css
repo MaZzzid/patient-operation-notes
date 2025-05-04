@@ -1,0 +1,103 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  user-select: none;
+}
+
+body {
+  margin: 0;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+button,
+select {
+  font-size: 1.02rem;
+  border: 1px solid #4b4b4b;
+  width: 100%;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+select:focus {
+  border: 1px solid #757575;
+  outline: 2px solid #3e6bff93;
+  box-shadow: 0 2px #3e6bff93;
+}
+
+input:disabled,
+select:disabled {
+  background-color: #dadada;
+}
+
+input[type="checkbox"] {
+  outline-color: #213baf;
+}
+
+button {
+  font-family: sans-serif;
+  text-align: center;
+  color: #ffffff;
+  background-color: #213baf;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #314ab9;
+}
+
+button:active {
+  translate: 0 1px;
+  scale: 0.99;
+}
+
+button:focus {
+  background-color: #334fca;
+  outline: 1px dashed #a3a3a3;
+  outline-offset: -4px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.hide {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.show {
+  display: block;
+}
+
+.error {
+  color: #fff !important;
+  background-color: #a62c2c !important;
+  border-color: #a62c2c !important;
+  outline-color: #a62c2c00 !important;
+}
+
+.error::placeholder {
+  color: #b6b6b6 !important;
+}
+
+.warning {
+  color: #fff !important;
+  background-color: #cfab0b !important;
+  border-color: #cfab0b !important;
+  outline-color: #cfab0b !important;
+}

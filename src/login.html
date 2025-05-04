@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="./css/login.css" />
+  <script src="./js/login.js" defer type="module"></script>
+</head>
+
+<body>
+
+  <div>
+    <h1>Login</h1>
+  </div>
+
+  <div>
+    <label for="name">Name</label>
+    <input type="text" id="name" />
+  </div>
+
+  <div>
+    <label for="pass">Password</label>
+    <input type="password" id="pass" />
+    <input type="text" id="spass" class="hidden" disabled />
+  </div>
+
+  <div>
+    <button id="login">Login</button>
+  </div>
+
+  <div>
+    <div id="message" class="hidden error">Username or Password is not correct</div>
+  </div>
+
+  <div>
+    <input type="checkbox" id="showpass" />
+    <label for="showpass">Show password</label>
+  </div>
+
+</body>
+
+</html>
