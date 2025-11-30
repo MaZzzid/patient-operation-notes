@@ -1,4 +1,5 @@
 import { app, BrowserWindow, ipcMain } from "electron";
+
 import { DatabaseSync } from "node:sqlite";
 import  "./database.js";
 
