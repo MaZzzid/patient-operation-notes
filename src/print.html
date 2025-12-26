@@ -1,489 +1,773 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Print</title>
+    <link rel="stylesheet" href="./css/print.css" />
+    <script src="./js/print.js" defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Print</title>
-  <link rel="stylesheet" href="./css/print.css" />
-  <script src="./js/print.js" defer></script>
-</head>
+  <body>
+    <nav>
+      <div class="active" data-print="op-note">OP Note</div>
+      <div data-print="treatment-sheet-post-operative-order">
+        Post Operative Order
+      </div>
+      <div data-print="treatment-sheet-fresh-order">Fresh Order</div>
+      <div data-print="treatment-sheet-medicine">Treatment Sheet</div>
+      <div data-print="op-consent">OP Consent</div>
+      <div data-print="medicine">Medicine</div>
+    </nav>
 
-<body>
-  <nav>
-    <div class="active" data-print="op-note">OP Note</div>
-    <div data-print="treatment-sheet">Treatment Sheet</div>
-    <div data-print="treatment-sheet-medicine">Treatment Sheet(Medicine)</div>
-    <div data-print="op-consent">OP Consent</div>
-  </nav>
+    <main>
+      <div class="op-note active">
+        <header>
+          <div>
+            <img src="./static/logo.jpg" />
+          </div>
+          <div>
+            <h1>TARAFDER CLINIC & DIAGNOSTIC CENTER</h1>
+            <div>Puraton Bazar, Darsana, Damurhuda, Chuadanga</div>
+            <div>Mobile: 01822-555222</div>
+          </div>
+        </header>
 
-  <main>
-    <div class="op-note active">
-      <header>
-        <h1>TARAFDER CLINIC & DIAGNOSTIC CENTER</h1>
-        <div>Puraton Bazar, Darsana, Damurhuda, Chuadanga</div>
-      </header>
-
-      <header>
         <div>OPERATION NOTE</div>
-      </header>
 
-      <div class="content">
-        <div>
-          <div>Date of Operation</div>
-          <div>:</div>
-          <div class="op-note-date"></div>
-        </div>
-
-        <div>
-          <div>Time of Operation</div>
-          <div>:</div>
-          <div class='op-note-time'></div>
-        </div>
-
-        <div>
-          <div>Name of Operation</div>
-          <div>:</div>
-          <div></div>
-        </div>
-
-        <div>
-          <div>Indication</div>
-          <div>:</div>
-          <div class="op-note-indication"></div>
-        </div>
-
-        <div>
-          <div>Surgeon</div>
-          <div>:</div>
-          <div class="op-note-surgeon"></div>
-        </div>
-
-        <div>
-          <div>Asst. Surgeon</div>
-          <div>:</div>
-          <div class="op-note-asst"></div>
-        </div>
-
-        <div>
-          <div>Anesthesiologist</div>
-          <div>:</div>
-          <div class="op-note-anes"></div>
-        </div>
-
-        <div>
-          <div>Findings and Procedure</div>
-          <div>:</div>
-          <div class="op-note-finding"></div>
-        </div>
-      </div>
-
-      <footer>
-        <div>Signature of Anesthesiologist</div>
-        <div>Signature of Surgeon</div>
-      </footer>
-
-      <div class="print">
-        <button>Print</button>
-      </div>
-    </div>
-    <div class="treatment-sheet">
-      <header>
-        <div>Treatment Sheet</div>
-        <header>
-          <div class="icon"><img src="./logo.jpg" /></div>
+        <div class="content">
           <div>
-            <h1>Tarafder Clinic & Diagonostic Center</h1>
-            <div>Puraton Bazar, Darsana, Damurhuda, Chuadanga</div>
-            <div>Mobile: 01822-555222</div>
+            <div>Date of Operation</div>
+            <div>:</div>
+            <div class="op-note-date"></div>
+          </div>
+
+          <div>
+            <div>Time of Operation</div>
+            <div>:</div>
+            <div class="op-note-time"></div>
+          </div>
+
+          <div>
+            <div>Name of Operation</div>
+            <div>:</div>
+            <div></div>
+          </div>
+
+          <div>
+            <div>Indication</div>
+            <div>:</div>
+            <div class="op-note-indication"></div>
+          </div>
+
+          <div>
+            <div>Name of Surgeon</div>
+            <div>:</div>
+            <div class="op-note-surgeon"></div>
+          </div>
+
+          <div>
+            <div>Name of Asst. Surgeon</div>
+            <div>:</div>
+            <div class="op-note-asst"></div>
+          </div>
+
+          <div>
+            <div>Name of Anesthesiologist</div>
+            <div>:</div>
+            <div class="op-note-anes"></div>
+          </div>
+
+          <div>
+            <div>Name of Anesthesia</div>
+            <div>:</div>
+            <div class="op-note-anes-type"></div>
+          </div>
+
+          <div>
+            <div>Findings and Procedure</div>
+            <div>:</div>
+            <div class="op-note-finding"></div>
+          </div>
+        </div>
+
+        <footer>
+          <div>Signature of Anesthesiologist</div>
+          <div>Signature of Surgeon</div>
+        </footer>
+
+        <div class="print">
+          <button>Print</button>
+        </div>
+      </div>
+      <div class="treatment-sheet-post-operative-order">
+        <header>
+          <div>
+            <div class="icon"><img src="./static/logo.jpg" /></div>
+            <div>
+              <h1>TARAFDER CLINIC & DIAGNOSTIC CENTER</h1>
+              <div>Puraton Bazar, Darsana, Damurhuda, Chuadanga</div>
+              <div>Mobile: 01822-555222</div>
+            </div>
+          </div>
+          <div>
+            <div>
+              <div>Patient Name:</div>
+              <div class="ts-name"></div>
+            </div>
+            <div>
+              <div>Age:</div>
+              <div class="ts-age"></div>
+            </div>
+            <div>
+              <div>Sex:</div>
+              <div class="ts-sex"></div>
+            </div>
+            <div>
+              <div>Date:</div>
+              <div class="ts-date"></div>
+            </div>
+            <div>
+              <div>Bed:</div>
+              <div class="ts-bed"></div>
+            </div>
           </div>
         </header>
-        <div>
+        <div class="follow-up">
           <div>
-            Patient Name:
-            <div class="ts-name"></div>
+            <div>OT Note</div>
+            <div>Baby Note</div>
           </div>
           <div>
-            Age:
-            <div class="ts-age"></div>
-          </div>
-          <div>
-            Sex:
-            <div class="ts-sex"></div>
-          </div>
-          <div>
-            Date:
-            <div class="ts-date"></div>
-          </div>
-          <div>
-            Bed:
-            <div class="ts-bed"></div>
-          </div>
-        </div>
-      </header>
-      <div class="follow-up">
-        <div>
-          <div>Follow Up</div>
-        </div>
-        <div>
-          <div>Rx.</div>
-        </div>
-      </div>
-      <footer>
-        <div>Medical Officer</div>
-      </footer>
+            <div><img src="./static/1.png" /></div>
+            <div>
+              <div>Rx.</div>
+              <div>NPO TFO</div>
+            </div>
+            <ul>
+              <li>
+                <div>
+                  Inf. <span class="bold">H/S</span> +
+                  <span class="bold">5% DNS</span> +
+                  <span class="bold">5% DA</span>
+                  <span class="italic">1Litter</span>
+                </div>
+                <div>IV @25-30 d/min</div>
+              </li>
+              <li>
+                <div>
+                  Inj. <span class="bold">Trizon</span> /
+                  <span class="bold">Oricef</span> /
+                  <span class="bold">Arixon</span>
+                  <span class="italic">1gm/2gm</span>
+                </div>
+                <div>1Vial IV stat & 12 hourly</div>
+              </li>
 
-      <div class="print">
-        <button>Print</button>
+              <li>
+                <div>
+                  Inj. <span class="bold">Phylopen </span> /
+                  <span class="bold">Floclox</span> /
+                  <span class="bold">Flux</span> /
+                  <span class="bold">Fluxabac</span>
+                  <span class="italic">250mg/500mg</span>
+                </div>
+                <div>1Vial IV stat & 6 hourly</div>
+              </li>
+
+              <li>
+                <div>
+                  Inj. <span class="bold">Moxaclav</span>
+                  <span class="italic">750gm/1.2gm</span>
+                </div>
+                <div>1Vial IV stat & 12 hourly</div>
+              </li>
+              <li>
+                <div>
+                  Inj. <span class="bold">Furotil</span>
+                  <span class="italic">750gm/1.5gm</span>
+                </div>
+                <div>1Vial IV stat & 12 hourly</div>
+              </li>
+              <li>
+                <div>
+                  Inf. <span class="bold">Metryl</span> /
+                  <span class="bold">Amodis</span>/
+                  <span class="bold">Metro</span>
+                  <span class="italic">500mg</span>
+                </div>
+                <div>1Bottle IV Stat & 8 hourly</div>
+              </li>
+
+              <li>
+                <div>
+                  Inj. <span class="bold">Toramax</span> /
+                  <span class="bold">Rolac</span> /
+                  <span class="bold">Zeropain</span>
+                  <span class="italic">30mg/60mg</span>
+                </div>
+                <div>1Ample IV stat & 12 hourly</div>
+              </li>
+              <li>
+                <div>
+                  Inj. <span class="bold">Remmo</span> /
+                  <span class="bold">Maxpro</span> /
+                  <span class="bold">Sergel</span> /
+                  <span class="bold">Esotid</span>
+                  <span class="italic">40mg </span>
+                </div>
+                <div>1Vial IV stat & 12 hourly</div>
+              </li>
+              <li>
+                <div>
+                  Inj. <span class="bold">Emistat</span>
+                  <span class="italic">8mg</span>
+                </div>
+                <div>1Ample IV Stat & SOS</div>
+              </li>
+
+              <li>
+                <div>
+                  Inj. <span class="bold">Nalbun</span>
+                  <span class="italic">10mg/20mg</span>
+                </div>
+                <div>1Ample IM Stat & SOS</div>
+              </li>
+
+              <li>
+                <div>
+                  Supp. <span class="bold">Voltalin</span>
+                  <span class="italic">12.5mg/25mg/50mg</span>
+                </div>
+                <div>1 Stick P/R -------> SOS</div>
+              </li>
+              <li>
+                <div><span class="bold">Continuous Catheterization</span></div>
+              </li>
+
+              <li>
+                <div><span class="bold">Please, Monitor vital sign.</span></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <footer>
+          <div>Medical Officer</div>
+        </footer>
+
+        <div class="print">
+          <button>Print</button>
+        </div>
       </div>
-    </div>
-    <div class="treatment-sheet-medicine">
-      <header>
-        <div>Treatment Sheet (Medicine)</div>
+      <div class="treatment-sheet-fresh-order">
         <header>
-          <div class="icon"><img src="./logo.jpg" /></div>
           <div>
-            <h1>Tarafder Clinic & Diagonostic Center</h1>
-            <div>Puraton Bazar, Darsana, Damurhuda, Chuadanga</div>
-            <div>Mobile: 01822-555222</div>
+            <div class="icon"><img src="./static/logo.jpg" /></div>
+            <div>
+              <h1>TARAFDER CLINIC & DIAGNOSTIC CENTER</h1>
+              <div>Puraton Bazar, Darsana, Damurhuda, Chuadanga</div>
+              <div>Mobile: 01822-555222</div>
+            </div>
+          </div>
+          <div>
+            <div>
+              <div>Patient Name:</div>
+              <div class="ts-name"></div>
+            </div>
+            <div>
+              <div>Age:</div>
+              <div class="ts-age"></div>
+            </div>
+            <div>
+              <div>Sex:</div>
+              <div class="ts-sex"></div>
+            </div>
+            <div>
+              <div>Date:</div>
+              <div class="ts-date"></div>
+            </div>
+            <div>
+              <div>Bed:</div>
+              <div class="ts-bed"></div>
+            </div>
           </div>
         </header>
+        <div class="follow-up">
+          <div>
+            <div>BP</div>
+          </div>
+          <div>
+            <div>
+              <img src="./static/2.png" />
+            </div>
+            <div>
+              <div>Rx</div>
+              <div>
+                <div>Diet -----> Sips of Water then semi solid to solid.</div>
+              </div>
+            </div>
+            <ul>
+              <li>
+                <div>
+                  Inj. <span class="bold">Trizon</span> /
+                  <span class="bold">Oricef</span> /
+                  <span class="bold">Arixon</span>
+                  <span class="italic">1gm/2gm</span>
+                </div>
+                <div>1 Vial IV 12 Hourly</div>
+              </li>
+
+              <li>
+                <div>
+                  Inf. <span class="bold">Ciprocin</span> /
+                  <span class="bold">Xerox</span> /
+                  <span class="bold">Ciprox</span>
+                  <span class="italic">200mg/100ml</span>
+                </div>
+                <div>1Bottle IV stat & 12 hourly</div>
+              </li>
+
+              <li>
+                <div>
+                  Inf. <span class="bold">Phylopen</span> /
+                  <span class="bold">Fluclox</span> /
+                  <span class="bold">Flux</span>
+                  <span class="bold">Floxabac</span>
+                  <span class="italic">250mg/500mg</span>
+                </div>
+                <div>1Vial IV stat & 6 hourly</div>
+              </li>
+
+              <li>
+                <div>
+                  Inj. <span class="bold">Toramax</span> /
+                  <span class="bold">Rolac</span> /
+                  <span class="bold">Zeropain</span>
+                  <span class="italic">30mg/60mg</span>
+                </div>
+                <div>1Ample IV stat & 12 hourly</div>
+              </li>
+              <li>
+                <div>
+                  Tab. <span class="bold">Metryl</span> /
+                  <span class="bold">Amodis</span> /
+                  <span class="bold">Metro</span>
+                  <span class="italic">400mg</span>
+                </div>
+                <div>1 + 1 + 1</div>
+              </li>
+              <li>
+                <div>
+                  Cap. <span class="bold">Acifix</span> /
+                  <span class="bold">Sergel</span> /
+                  <span class="bold">Remmo</span>
+                  <span class="italic">20mg/40mg</span>
+                </div>
+                <div>1 + 0 + 1</div>
+              </li>
+
+              <li>
+                <div>
+                  Tab. <span class="bold">Omidon</span> /
+                  <span class="bold">Don-A</span> /
+                  <span class="bold">Domin</span>
+                  <span class="italic">10mg</span>
+                </div>
+                <div>1 + 1 + 1</div>
+              </li>
+
+              <li>
+                <div>
+                  Supp. <span class="bold">Voltalin</span>
+                  <span class="italic">50mg</span>
+                </div>
+                <div>1 Stick P/R -------> SOS</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <footer>
+          <div>Medical Officer</div>
+        </footer>
+
+        <div class="print">
+          <button>Print</button>
+        </div>
+      </div>
+      <div class="treatment-sheet-medicine">
+        <header>
+          <div>Treatment Sheet (Medicine)</div>
+          <div>
+            <div><img src="./static/logo.jpg" /></div>
+            <div>
+              <h1>TARAFDER CLINIC & DIAGNOSTIC CENTER</h1>
+
+              <div>Puraton Bazar, Darsana, Damurhuda, Chuadanga</div>
+              <div>Mobile: 01822-555222</div>
+            </div>
+          </div>
+          <div>
+            <div>
+              Patient Name:
+              <div class="tsmname"></div>
+            </div>
+            <div>
+              Age:
+              <div class="tsmage"></div>
+            </div>
+            <div>
+              Sex:
+              <div class="tsmsex"></div>
+            </div>
+            <div>
+              Date:
+              <div class="tsmdate"></div>
+            </div>
+            <div>
+              Bed:
+              <div class="tsmbed"></div>
+            </div>
+          </div>
+        </header>
+        <div class="follow-up">
+          <table>
+            <tr>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Dose</th>
+              <th>Route</th>
+              <th>Name of Medicine</th>
+              <th>Name of Nurse</th>
+              <th>Signature</th>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="print">
+          <button>Print</button>
+        </div>
+      </div>
+      <div class="op-consent">
+        <header>
+          <h1>তরফদার ক্লিনিক এন্ড ডায়াগনস্টিক সেন্টার</h1>
+          <div>পুরাতন বাজার, দর্শনা, দামুড়হুদা, চুয়াডাঙ্গা</div>
+          <div>অস্ত্রোপাচার সম্মতিপত্র</div>
+        </header>
+
+        <div class="patient-info">
+          <div>রোগীর নাম: <span class="opcname"></span></div>
+          <div>বয়স: <span class="opcage"></span></div>
+        </div>
+
+        <div>আমি আমার পিতার/মাতার/স্ত্রীর/পুত্রের/কন্যার.............</div>
+        <div>
+          অস্ত্রোপাচার সম্পন্ন করার জন্য
+          <b><span class="opcdoctor"></span></b>
+          -কে এবং তার নির্বাচিত সহকারীদের মনোনীত করছি। যদি অস্ত্রোপাচার
+          প্রক্রিয়ার মধ্যে নতুন পরিস্থিতি, জটিলতা বা উপশম দেখা দেয়, সে ক্ষেত্রে
+          বাস্তব অবস্থার পরিপ্রেক্ষিতে প্রয়োজনীয় সিদ্ধান্ত ও ব্যবস্থা গ্রহনের
+          জন্য আমি তার উপরে আস্থা রাখছি।
+        </div>
+
+        <div>
+          উপরোক্ত অস্ত্রোপাচারের উদ্দেশ্য এবং প্রকৃত চিকিৎসা সংক্রান্ত বিকল্প
+          পদ্ধতি, এই সংক্রান্ত ঝুঁকি এবং এর সাথে জড়িত যা কিছু জটিলতা সে সব
+          পুরোপুরি ভাবে আমার কাছে ব্যাখ্যা করা হয়েছে এবং আমাকে এই মর্মেও অবহিত
+          করা হয়েছে যে, অস্ত্রোপাচারের ফলাফল অনুকূল নাও হতে পারে।
+        </div>
+
+        <div>
+          অস্ত্রোপাচার চলাকালীন সময়ে এনেস্থেসিয়র দায়িত্ব আমার সম্মতিক্রমে
+          <b><span class="opcanes"></span></b>
+          -কে দেয়া হচ্ছে এবং তিনি এ ব্যাপারে প্রয়োজন মত পদক্ষেপ গ্রহণ করবেন। আমি
+          এই নিশ্চয়তা দিচ্ছি যে, আমি অস্ত্রোপাচার সংক্রান্ত উপরোক্ত সম্মতিপত্র
+          পুরোপুরি পড়েছি এবং সংশ্লিষ্ট প্রয়োজনীয় বিষয়গুলো যথাযথভাবে আমাকে
+          ব্যাখ্যা করা হয়েছে। অস্ত্রোপাচার কোন রকম দূর্ঘটনা এবং পরবর্তী জটিলতা
+          জন্য কর্তৃপক্ষ অথবা অস্ত্রোপাচারকারী চিকিৎসকবৃন্দ কোন প্রকার দায়ী
+          থাকবে না।
+        </div>
+
+        <div>
+          শূন্য ঘরগুলো যথাযথভাবে পূরণ করার পর আমি সম্মতিপত্রে স্বাক্ষর করছি।
+        </div>
+
+        <div class="signature">
+          <div class="left">
+            <div>স্বাক্ষীর স্বাক্ষর:</div>
+            <div>নাম: ...............................................</div>
+            <div>ঠিকানা: ...........................................</div>
+            <div>তারিখ: ............................................</div>
+            <div>মোবাইল নং: ....................................</div>
+          </div>
+          <div class="right">
+            <div>রোগী/রোগীর আত্মীয়/অভিভাবকের স্বাক্ষর:</div>
+            <div>নাম: ...............................................</div>
+            <div>ঠিকানা: ...........................................</div>
+            <div>তারিখ: .............................................</div>
+            <div>মোবাইল নং: ....................................</div>
+          </div>
+        </div>
+
+        <div class="print">
+          <button>Print</button>
+        </div>
+      </div>
+      <div class="medicine">
         <div>
           <div>
-            Patient Name:
-            <div class="tsmname"></div>
+            <h3>Medicine</h3>
+            <ul>
+              <li>K-One</li>
+              <li>Duratocin / Arbicin 100mcg/ml</li>
+              <li>Hexicord</li>
+              <li>Cotson 10mg</li>
+              <li>Isovent / Cytomis 200mg/600mg</li>
+            </ul>
           </div>
           <div>
-            Age:
-            <div class="tsmage"></div>
-          </div>
-          <div>
-            Sex:
-            <div class="tsmsex"></div>
-          </div>
-          <div>
-            Date:
-            <div class="tsmdate"></div>
-          </div>
-          <div>
-            Bed:
-            <div class="tsmbed"></div>
+            <h3>Others</h3>
+            <ul>
+              <li>Cord Clamp - (2)</li>
+              <li>Syringe - (2)</li>
+              <li>Alo Pad - (2)</li>
+              <li>Belt - (1)</li>
+              <li>Beby Wipes - (1)</li>
+              <li>Biomil / Lactogen - (1)</li>
+            </ul>
           </div>
         </div>
-      </header>
-      <div class="follow-up">
-        <table>
-          <tr>
-            <th>Date</th>
-            <th>Time</th>
-            <th>Dose</th>
-            <th>Route</th>
-            <th>Name of Medicine</th>
-            <th>Name of Nurse</th>
-            <th>Signature</th>
-          </tr>
 
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </table>
-      </div>
-
-      <div class="print">
-        <button>Print</button>
-      </div>
-    </div>
-    <div class="op-consent">
-      <header>
-        <h1>তরফদার ক্লিনিক এন্ড ডায়াগনস্টিক সেন্টার</h1>
-        <div>পুরাতন বাজার, দর্শনা, দামুড়হুদা, চুয়াডাঙ্গা</div>
-        <div>অস্ত্রোপাচার সম্মতি পত্র</div>
-      </header>
-
-      <div class="patient-info">
-        <div>রোগীর নাম: <span class="opcname"></span></div>
-        <div>বয়স: <span class="opcage"></span></div>
-      </div>
-
-      <div>পিতা/স্বামী/অভিভাবকের স্বাক্ষর:</div>
-      <div>
-        আমি আমার নিজের/পিতার/মাতার/স্ত্রীর/পুত্রের/
-        কন্যার.........................................................................
-      </div>
-      <div>
-        অস্ত্রোপাচার সম্পন্ন করার জন্য
-        <b><span class="opcdoctor"></span></b>
-        -কে এবং তার নির্বাচিত সহকারীদের মনোনীত করছি। যদি অস্ত্রোপাচার
-        প্রক্রিয়ার মধ্যে নতুন পরিস্থিতি, জটিলতা বা উপশম দেখা দেয়, সে ক্ষেত্রে
-        বাস্তব অবস্থার পরিপ্রেক্ষিতে প্রয়োজনীয় সিদ্ধান্ত ও ব্যবস্থা গ্রহনের
-        জন্য আমি তার উপরে আস্থা রাখছি।
-      </div>
-
-      <div>
-        উপরোক্ত অস্ত্রোপাচারের উদ্দেশ্য এবং প্রকৃত চিকিৎসা সংক্রান্ত বিকল্প
-        পদ্ধতি, এই সংক্রান্ত ঝুঁকি এবং এর সাথে জড়িত যা কিছু জটিলতা সে সব
-        পুরোপুরি ভাবে আমার কাছে ব্যাখ্যা করা হয়েছে এবং আমাকে এই মর্মেও অবহিত
-        করা হয়েছে যে, অস্ত্রোপাচারের ফলাফল অনুকূল নাও হতে পারে।
-      </div>
-
-      <div>
-        অস্ত্রোপাচার চলাকালীন সময়ে এনেস্থেসিয়র দায়িত্ব আমার সম্মতিক্রমে
-        <b><span class="opcanes"></span></b>
-        -কে দেয়া হচ্ছে এবং তিনি এ ব্যাপারে প্রয়োজন মত পদক্ষেপ গ্রহণ করবেন। আমি
-        এই নিশ্চয়তা দিচ্ছি যে, আমি অস্ত্রোপাচার সংক্রান্ত উপরোক্ত সম্মতিপত্র
-        পুরোপুরি পড়েছি এবং সংশ্লিষ্ট প্রয়োজনীয় বিষয়গুলো যথাযথভাবে আমাকে
-        ব্যাখ্যা করা হয়েছে। অস্ত্রোপাচার কোন রকম দূর্ঘটনা এবং পরবর্তী জটিলতা
-        জন্য কর্তৃপক্ষ অথবা অস্ত্রোপাচারকারী চিকিৎসকবৃন্দ কোন প্রকার দায়ী
-        থাকবে না।
-      </div>
-
-      <div>
-        শূন্য ঘরগুলো যথাযথভাবে পূরণ করার পর আমি সম্মতিপত্রে স্বাক্ষর করছি।
-      </div>
-
-      <div class="signature">
-        <div class="left">
-          <div>স্বাক্ষীর স্বাক্ষর:</div>
-          <div>নাম: .............................................</div>
-          <div>ঠিকানা: ........................................</div>
-          <div>তারিখ: ..........................................</div>
-        </div>
-        <div class="right">
-          <div>রোগী/রোগীর আত্মীয়/অভিভাবকের স্বাক্ষর:</div>
-          <div>নাম: .................................................</div>
-          <div>ঠিকানা: ............................................</div>
-          <div>তারিখ: ..............................................</div>
+        <div class="print">
+          <button>Print</button>
         </div>
       </div>
-
-      <div class="print">
-        <button>Print</button>
-      </div>
-    </div>
-  </main>
-</body>
-
+    </main>
+  </body>
 </html>
